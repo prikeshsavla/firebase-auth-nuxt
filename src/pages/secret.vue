@@ -5,25 +5,27 @@
 </template>
 
 <script>
-import {getUserFromCookie} from '@/helpers'
+import { getUserFromCookie } from '@/helpers'
 import * as firebase from 'firebase/app'
 export default {
-
-  asyncData({req, redirect}){
-    if(process.server){
-
-       const user = getUserFromCookie(req);
-        if(!user){
-            redirect('/login')
-        }
-    }
-    else{
-      let user = firebase.auth().currentUser
-      if(!user){
+  asyncData(context) {
+    let { req, redirect } = context
+    if (process.server) {
+      console.log(req.headers)
+      if (req && req.headers) {
+        const user = getUserFromCookie(req)
+        if (!user) {
           redirect('/login')
+        }
+      } else {
+        redirect('/login')
+      }
+    } else {
+      let user = firebase.auth().currentUser
+      if (!user) {
+        redirect('/login')
       }
     }
-  }
-
+  },
 }
 </script>

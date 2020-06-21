@@ -8,12 +8,12 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/secret.vue?vue&type=template&id=78ee4294&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/secret.vue?vue&type=template&id=4c1fc722&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_vm._ssrNode("<h1 class=\"text-3xl\">This is secret info</h1>")])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/secret.vue?vue&type=template&id=78ee4294&
+// CONCATENATED MODULE: ./pages/secret.vue?vue&type=template&id=4c1fc722&
 
 // EXTERNAL MODULE: external "jwt-decode"
 var external_jwt_decode_ = __webpack_require__(22);
@@ -54,14 +54,22 @@ var app_ = __webpack_require__(1);
 
 
 /* harmony default export */ var secretvue_type_script_lang_js_ = ({
-  asyncData({
-    req,
-    redirect
-  }) {
-    if (true) {
-      const user = getUserFromCookie(req);
+  asyncData(context) {
+    let {
+      req,
+      redirect
+    } = context;
 
-      if (!user) {
+    if (true) {
+      console.log(req.headers);
+
+      if (req && req.headers) {
+        const user = getUserFromCookie(req);
+
+        if (!user) {
+          redirect('/login');
+        }
+      } else {
         redirect('/login');
       }
     } else {}

@@ -14,19 +14,18 @@ const config = {
 };
 const nuxt = new Nuxt(config);
 
-function handleRequest(req, res) {
+ function handleRequest(req, res) {
+  console.log(req.path);
   res.set("Cache-Control", "public, max-age=150, s-maxage=300");
-  nuxt
-    .renderRoute("/")
+   nuxt .renderRoute(req.path, {req: req, res:res})
     .then((result) => {
-      console.log(result.html);
-      res.send(result.html);
+       res.send(result.html);
     })
     .catch((e) => {
-      console.log(e);
       res.send(e);
     });
 }
+// app.use(nuxt.render);
 
 app.get("**", handleRequest);
 
