@@ -1,4 +1,5 @@
 <template>
+<div class="container">
   <div class="w-full max-w-xs">
     <form
       @submit.prevent="pressed"
@@ -45,6 +46,7 @@
       <p class="text-red-500 text-xs italic">{{ error }}</p>
     </form>
   </div>
+</div>
 </template>
 
 <script>

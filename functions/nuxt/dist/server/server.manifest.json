@@ -1,0 +1,15 @@
+{
+  "entry": "server.js",
+  "files": {
+    "pages_index.js": "pages_index.js",
+    "pages_login.js": "pages_login.js",
+    "pages_secret.js": "pages_secret.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "pages_index.js": "pages_index.js.map",
+    "pages_login.js": "pages_login.js.map",
+    "pages_secret.js": "pages_secret.js.map",
+    "server.js": "server.js.map"
+  }
+}

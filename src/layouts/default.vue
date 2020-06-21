@@ -1,5 +1,5 @@
 <template>
-  <div class="main min-h-screen bg-gray-100">
+  <div class="main min-h-screen">
     <div class="main-links">
       <nuxt-link to="/">Home Page</nuxt-link>
       <nuxt-link to="secret">Secret</nuxt-link>
@@ -64,6 +64,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+      --bg-opacity: 1;
+    background-color: #f7fafc;
+    background-color: rgba(247,250,252,var(--bg-opacity));
 }
 
 *,
@@ -84,5 +87,14 @@ html {
   width: 30%;
   display: flex;
   justify-content: space-around;
+}
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 </style>

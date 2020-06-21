@@ -1,0 +1,23 @@
+[
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "E:\\\\Node\\\\firebase-nuxt\\\\src\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_d23a1cb6"
+  },
+  {
+    "name": "secret",
+    "path": "/secret",
+    "component": "E:\\\\Node\\\\firebase-nuxt\\\\src\\\\pages\\\\secret.vue",
+    "chunkName": "pages/secret",
+    "_name": "_59c281a4"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "E:\\\\Node\\\\firebase-nuxt\\\\src\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_658962e4"
+  }
+]

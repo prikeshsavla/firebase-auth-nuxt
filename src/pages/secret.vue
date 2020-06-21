@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1 class="text-3xl">This is secret info</h1>
   </div>
 </template>
@@ -27,5 +27,3 @@ export default {
 
 }
 </script>
-
-<style lang="scss" scoped></style>
